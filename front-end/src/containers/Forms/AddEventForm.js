@@ -48,7 +48,7 @@ class AddEventForm extends Component {
         
         var currDate = (date).toString().slice(0,10)
         var currYear = currDate.slice(0,4)
-        var currMonDay = (currDate.slice(6,10)).replace(/-0+/g, '-');
+        var currMonDay = ((currDate.slice(5,10)).replace(/-0+/g, '-')).replace(/^0+/, '');
         var publishDate = `${currMonDay}-${currYear}`
 
         this.setState({
